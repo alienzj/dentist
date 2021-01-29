@@ -20,6 +20,12 @@ configuration "default" {
     buildRequirements "requireBoundsCheck" "requireContracts"
 }
 
+configuration "dockerfile" {
+    buildRequirements "requireBoundsCheck" "requireContracts"
+    dflags        "--lowmem" platform="ldc"
+    dflags        "-lowmem"  platform="dmd"
+}
+
 configuration "testing" {
     versions      "DentistTesting"
 }
